@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dark:bg-slate-900 dark:text-white pb-8 text-sm">
+        <div class="w-full flex justify-center py-8">
+            <button
+                id="theme-toggle"
+                class="p-2 rounded-full text-white bg-slate-900 dark:text-slate-900 dark:bg-white"
+            >
+                Toggle theme
+            </button>
+        </div>
+        <!-- Ecrivez le contenu à partir d'ici et supprimez le bloc suivant avant de commencer -->
+        <section class="w-1/2 mx-auto my-8 flex justify-center items-center">
+            <div class="bg-gray-200 shadow-lg w-96 border-gray-500 rounded border-2 dark:bg-slate-900">
+                <div class="px-4 py-5">
+                  <h2 class="text-lg leading-6 font-medium dark:text-white">My Schedule</h2>
+                  <div class="mt-4">
+                    <div class="flex justify-between items-center bg-gray-50 dark:bg-slate-900 px-4 py-2 border-gray-500 rounded border-2">
+                        <div>
+                            <div class="text-sm font-medium text-gray-500 dark:text-white">Tues, Jan 17 2023</div>
+                            <div class="text-sm font-medium text-gray-500 mb-1 dark:text-white">Shift name</div>
+                        </div>
+
+                        <div class="text-sm font-medium text-red-500 dark:text-white">In <span class="text-red-600">45 mins</span></div>
+                    </div>
+                    <div class="mt-4 bg-gray-300 border-gray-500 rounded border-2 dark:bg-slate-900">
+                        <div class="flex justify-between items-center px-4 py-2  cursor-pointer">
+                          <span>07:00A - 03:00P </span>
+                          <svg class="h-4 w-4 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
+                      <div id="accordion-content" class="p-4">
+                        <p class="text-sm text-gray-700 py-1 dark:text-white">07:00 - 10:00 Drive Thru</p>
+                        <p class="text-sm text-gray-700 py-1 dark:text-white">07:00 - 10:00 Drive Thru</p>
+                        <p class="text-sm text-gray-700 py-1 dark:text-white">07:00 - 10:00 Drive Thru</p>
+                        <p class="text-sm text-gray-700 py-1 dark:text-white">07:00 - 10:00 Drive Thru</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </div>
+    <script>
+        const btn = document.getElementById("theme-toggle");
+        btn.addEventListener("click", function () {
+            document.body.classList.toggle("dark");
+        });
+    </script>
+</body>
+</html>
